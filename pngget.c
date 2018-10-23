@@ -749,8 +749,7 @@ png_get_iCCP(png_const_structrp png_ptr, png_inforp info_ptr,
       /* This is somewhat irrelevant since the profile data returned has
        * actually been uncompressed.
        */
-      if (compression_type != NULL)
-         *compression_type = PNG_COMPRESSION_TYPE_BASE;
+      *compression_type = PNG_COMPRESSION_TYPE_BASE;
       return (PNG_INFO_iCCP);
    }
 
