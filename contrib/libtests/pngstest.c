@@ -1142,7 +1142,7 @@ get_pixel(png_uint_32 format))(Pixel *p, png_const_voidp pb)
    }
 }
 
-/* Conversion between pixel formats.  The code above effectively eliminates the
+/* Convertion between pixel formats.  The code above effectively eliminates the
  * component ordering changes leaving three basic changes:
  *
  * 1) Remove an alpha channel by pre-multiplication or compositing on a
@@ -2036,7 +2036,7 @@ typedef struct
    /* Precalculated values: */
    int          in_opaque;   /* Value of input alpha that is opaque */
    int          is_palette;  /* Sample values come from the palette */
-   int          accumulate;  /* Accumulate component errors (don't log) */
+   int          accumulate;  /* Accumlate component errors (don't log) */
    int          output_8bit; /* Output is 8-bit (else 16-bit) */
 
    void (*in_gp)(Pixel*, png_const_voidp);

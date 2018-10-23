@@ -210,11 +210,7 @@
        defined(__SSE2__) || defined(_M_X64) || defined(_M_AMD64) || \
        (defined(_M_IX86_FP) && _M_IX86_FP >= 2)
 #         define PNG_INTEL_SSE_OPT 1
-#      else
-#         define PNG_INTEL_SSE_OPT 0
 #      endif
-#   else
-#      define PNG_INTEL_SSE_OPT 0
 #   endif
 #endif
 
@@ -238,8 +234,6 @@
 #   if PNG_INTEL_SSE_IMPLEMENTATION > 0
 #      define PNG_FILTER_OPTIMIZATIONS png_init_filter_functions_sse2
 #   endif
-#else
-#   define PNG_INTEL_SSE_IMPLEMENTATION 0
 #endif
 
 #if PNG_MIPS_MSA_OPT > 0
@@ -923,7 +917,7 @@
     * PNG files the -I directives must match.
     *
     * The most likely explanation is that you passed a -I in CFLAGS. This will
-    * not work; all the preprocessor directives and in particular all the -I
+    * not work; all the preprocessor directories and in particular all the -I
     * directives must be in CPPFLAGS.
     */
 #endif

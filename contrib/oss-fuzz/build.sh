@@ -14,13 +14,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# Last changed in libpng 1.6.35 [March 6, 2018]
+# Last changed in libpng 1.6.33 [September 28, 2017]
 #
-# Revisions by Glenn Randers-Pehrson, 2017:
+# Revisions by Glenn Randers-Pehson, 2017:
 # 1. Build only the library, not the tools (changed "make -j$(nproc) all" to
 #     "make -j$(nproc) libpng16.la").
 # 2. Disabled WARNING and WRITE options in pnglibconf.dfa.
-# 3. Build zlib alongside libpng
 ################################################################################
 
 # Disable logging via library build configuration control.
@@ -31,9 +30,9 @@ cat scripts/pnglibconf.dfa | \
 > scripts/pnglibconf.dfa.temp
 mv scripts/pnglibconf.dfa.temp scripts/pnglibconf.dfa
 
-# build the libpng library.
+# build the library.
 autoreconf -f -i
-./configure --with-libpng-prefix=OSS_FUZZ_
+./configure
 make -j$(nproc) clean
 make -j$(nproc) libpng16.la
 
