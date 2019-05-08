@@ -30,7 +30,6 @@ cc_defaults {
                 "arm/arm_init.c",
                 "arm/filter_neon.S",
                 "arm/filter_neon_intrinsics.c",
-                "arm/palette_neon_intrinsics.c",
             ],
         },
         arm64: {
@@ -38,7 +37,6 @@ cc_defaults {
                 "arm/arm_init.c",
                 "arm/filter_neon.S",
                 "arm/filter_neon_intrinsics.c",
-                "arm/palette_neon_intrinsics.c",
             ],
         },
         x86: {
