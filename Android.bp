@@ -43,21 +43,20 @@ cc_defaults {
         },
         x86: {
             srcs: [
-                "intel/intel_init.c",
-                "intel/filter_sse2_intrinsics.c",
+                "contrib/intel/intel_init.c",
+                "contrib/intel/filter_sse2_intrinsics.c",
             ],
             // Disable optimizations because they crash on windows
             // cflags: ["-DPNG_INTEL_SSE_OPT=1"],
         },
         x86_64: {
             srcs: [
-                "intel/intel_init.c",
-                "intel/filter_sse2_intrinsics.c",
+                "contrib/intel/intel_init.c",
+                "contrib/intel/filter_sse2_intrinsics.c",
             ],
             // Disable optimizations because they crash on windows
             // cflags: ["-DPNG_INTEL_SSE_OPT=1"],
         },
-
     },
     target: {
         android: {
